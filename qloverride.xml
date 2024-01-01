@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>PLG_SYSTEM_QLOVERRIDE</name>
+    <author>Ingo Holewczuk; Mareike Riegel</author>
+    <creationDate>2024</creationDate>
+    <copyright>Copyright (C) 2024 ql.de All rights reserved.</copyright>
+    <authorEmail>mareike.riegel@ql.de</authorEmail>
+    <authorUrl>http://ql.de/</authorUrl>
+    <version>1.0.0</version>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <description>PLG_SYSTEM_QLOVERRIDE_DESCRIPTION</description>
+    <files>
+        <filename plugin="qloverride">qloverride.php</filename>
+        <filename plugin="qloverride">qloverride.xml</filename>
+        <filename plugin="qloverride">index.html</filename>
+        <filename plugin="qloverride">license.txt</filename>
+        <folder plugin="qloverride">language</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_qloverride.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_qloverride.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic">
+                <field name="component_name_administrator" type="textarea" default="" label="PLG_SYSTEM_QLFORMOVERRIDE_ADMINISTRATOR_COMPONENTS_LABEL" description="PLG_SYSTEM_QLFORMOVERRIDE_ADMIN_COMPONENTS_DESC" />
+                <field name="component_name_site" type="textarea" default="" label="PLG_SYSTEM_QLFORMOVERRIDE_SITE_COMPONENTS_LABEL" description="PLG_SYSTEM_QLFORMOVERRIDE_SITE_COMPONENTS_DESC" />
+                <field name="operating_system" type="list"  default="unknown" label="PLG_SYSTEM_QLFORMOVERRIDE_OPERATINGSYSTEM_LABEL" description="PLG_SYSTEM_QLFORMOVERRIDE_OPERATINGSYSTEM_DESC" >
+                    <option value="">PLG_SYSTEM_QLFORMOVERRIDE_OPERATINGSYSTEM_UNKNOWN</option>
+                    <option value="windows">PLG_SYSTEM_QLFORMOVERRIDE_OPERATINGSYSTEM_WINDOWS</option>
+                    <option value="linux">PLG_SYSTEM_QLFORMOVERRIDE_OPERATINGSYSTEM_LINUX</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+</extension>
